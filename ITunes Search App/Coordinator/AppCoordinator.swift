@@ -9,47 +9,47 @@ import UIKit
 
 class AppCoordinator {
 
-    private let navigationController = UINavigationController()
+    var navigationController: UINavigationController
 
-    var rootViewController: UIViewController {
-         return navigationController
-     }
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
 
     let storyboard  = UIStoryboard(name: "Main", bundle: nil)
 
     func start() {
         onLoginScene()
     }
+    
     func onLoginScene() {
         guard let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { fatalError("Unable to Instantiate Login View Controller")
         }
-        let loginViewModel = LoginViewModel()
-        loginViewModel.appCoordinator = self
-        loginViewController.viewModel = loginViewModel
         navigationController.pushViewController(loginViewController, animated: true)
     }
 
     func onRegisterScene() {
         guard let registerViewController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
-        let registerViewModel = RegisterViewModel()
-        registerViewModel.appCoordinator = self
-        registerViewController.viewModel = registerViewModel
+
         navigationController.pushViewController(registerViewController, animated: true)
     }
 
-    func onAlbumSearchScene() {
+    func onAlbumSearchScene(with email: String) {
         guard let searchAlbumViewController = storyboard.instantiateViewController(withIdentifier: "SearchAlbumViewController") as? SearchAlbumViewController else { return }
-        let searchAlbumViewModel = SearchAlbumViewModel()
-        searchAlbumViewModel.appCoordinator = self
-        searchAlbumViewController.viewModel = searchAlbumViewModel
+        searchAlbumViewController.viewModel.email = email
         navigationController.pushViewController(searchAlbumViewController, animated: true)
     }
 
-    func onTracksScene() {
+    func onTracksScene(with id: Int,
+                       _ albumTitle: String,
+                       _ groupTitle: String,
+                       _ date: String,
+                       _ imageUrl: String ) {
         guard let albumTracksViewController = storyboard.instantiateViewController(withIdentifier: "AlbumTracksViewController") as? AlbumTracksViewController else { return }
-        let albumTracksViewModel = AlbumTracksViewModel()
-        albumTracksViewModel.appCoordinator = self
-        albumTracksViewController.viewModel = albumTracksViewModel
+        albumTracksViewController.albumId = id
+        albumTracksViewController.albumTitle = albumTitle
+        albumTracksViewController.groupTitle = groupTitle
+        albumTracksViewController.date = date
+        albumTracksViewController.image = imageUrl
         navigationController.pushViewController(albumTracksViewController, animated: true)
     }
 }

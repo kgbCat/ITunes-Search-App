@@ -8,15 +8,13 @@
 import UIKit
 
 class SearchAlbumViewModel {
-    weak var appCoordinator: AppCoordinator?
+    
     let coreData = CoreDataHelper()
-
-//    func onTracksList() {
-//        appCoordinator?.onTracksScene()
-//    }
+    var email = ""
 
     func getUsersInfo() -> User? {
-        if let user = coreData.getUser(email: "delova.anna@mail.ru", password: "Qwertyt1") {
+
+        if let user = coreData.getCheckedUsersData(email: email) {
             return user
         } else {
             return nil

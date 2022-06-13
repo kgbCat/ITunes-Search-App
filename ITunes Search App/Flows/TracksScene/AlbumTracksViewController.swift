@@ -10,11 +10,17 @@ import UIKit
 final class AlbumTracksViewController: UIViewController {
 
     var viewModel = AlbumTracksViewModel()
+    var coordinator: AppCoordinator?
     private let cellId = String(describing: TrackTableViewCell.self)
 
 
     let networkService = NetworkService()
-    var albumId = 1440875185
+    var albumId = 0
+    var albumTitle = ""
+    var groupTitle = ""
+    var date =  ""
+    var image = ""
+
     var tracks = [Track]()
 
 
@@ -39,6 +45,10 @@ final class AlbumTracksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let navigationController = navigationController {
+              coordinator = AppCoordinator(navigationController: navigationController)
+          }
+        displayAlbumInfo()
         getTracks()
 
     }
@@ -59,11 +69,16 @@ final class AlbumTracksViewController: UIViewController {
         }
     }
 
-    private func displayAlbumInfo() {
-        
+    func displayAlbumInfo() {
+        DispatchQueue.main.async {
+            self.albumTitleLabel.text = self.albumTitle
+            self.GroupTitleLabel.text = self.groupTitle
+            self.releaseLabel.text = self.date
+            if let url = URL(string: self.image){
+                self.albumImageView.load(url: url)
+            }
+        }
     }
-    
-
 }
 extension AlbumTracksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

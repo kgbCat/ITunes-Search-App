@@ -11,19 +11,22 @@ class LoginViewController: UIViewController {
 
 
     var viewModel = LoginViewModel()
+    var coordinator: AppCoordinator?
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let navigationController = navigationController {
+              coordinator = AppCoordinator(navigationController: navigationController)
+          }
         configureTextFields()
-
     }
 
     @IBAction func signUpTapped(_ sender: Any) {
         // navigate to  register  scene
-        viewModel.appCoordinator.onRegisterScene()
+        coordinator?.onRegisterScene()
     }
 
     @IBAction func signInTapped(_ sender: Any) {
@@ -32,6 +35,7 @@ class LoginViewController: UIViewController {
         else { return }
         if viewModel.validateUser(email, password) {
             // navigate further
+            coordinator?.onAlbumSearchScene(with: email)
             //delova.anna@mail.ru
             //Qwertyt1
         } else {

@@ -8,7 +8,7 @@
 import UIKit
 
 final class SearchAlbumViewController: UIViewController {
-
+    var coordinator: AppCoordinator?
     var viewModel = SearchAlbumViewModel()
 
     private let networkService = NetworkService()
@@ -43,6 +43,9 @@ final class SearchAlbumViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let navigationController = navigationController {
+              coordinator = AppCoordinator(navigationController: navigationController)
+          }
         displayUsersData()
     }
 
@@ -96,9 +99,15 @@ extension SearchAlbumViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 
         let collectionId = albums[indexPath.row].collectionId
-        AlbumTracksViewController().albumId = collectionId
-//        viewModel.onTracksList()
+        let albumTitle = albums[indexPath.row].collectionName
+        let groupTitle = albums[indexPath.row].artistName
+        let releaseDate = albums[indexPath.row].releaseDate
+        let imageUrl = albums[indexPath.row].artworkUrl100
 
+        DispatchQueue.main.async {
+            self.coordinator?.onTracksScene(with: collectionId, albumTitle, groupTitle, releaseDate, imageUrl
+            )
+        }
     }
 }
 extension SearchAlbumViewController: UISearchBarDelegate {

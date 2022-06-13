@@ -9,6 +9,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    var coordinator: AppCoordinator?
     var viewModel = RegisterViewModel()
     private var isAgeValid = false
 
@@ -35,6 +36,9 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let navigationController = navigationController {
+              coordinator = AppCoordinator(navigationController: navigationController)
+          }
         configureTextFields()
     }
 
@@ -52,10 +56,12 @@ class RegisterViewController: UIViewController {
         }
         viewModel.createNewUser(name, lastName, confirmedPassword, email, phone, datePicker.date)
         // navigate to login
+        coordinator?.onLoginScene()
     }
 
     @IBAction func signInButtonTapped(_ sender: UIButton) {
         // navigate to login
+        coordinator?.onLoginScene()
     }
 
 

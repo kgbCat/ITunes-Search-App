@@ -12,29 +12,20 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    private let appCoordinator = AppCoordinator()
+    var appCoordinaor: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
+        let navigaionConroller = UINavigationController()
+        appCoordinaor = AppCoordinator(navigationController: navigaionConroller)
+        appCoordinaor?.start()
 
-        appCoordinator.start()
-        window?.rootViewController = appCoordinator.rootViewController
+        window?.rootViewController = navigaionConroller
         window?.makeKeyAndVisible()
 
         return true
     }
-
-//    // MARK: UISceneSession Lifecycle
-//
-//    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-//
-//        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-//    }
-//
-//    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-//
-//    }
 
     // MARK: - Core Data stack
 

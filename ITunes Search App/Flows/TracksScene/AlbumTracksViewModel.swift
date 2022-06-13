@@ -8,6 +8,6 @@
 import UIKit
 
 class AlbumTracksViewModel {
-    weak var appCoordinator: AppCoordinator?
+    
     
 }

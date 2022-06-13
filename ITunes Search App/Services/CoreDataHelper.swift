@@ -48,4 +48,22 @@ class CoreDataHelper {
         }
         return returnedUser
     }
+
+    func getCheckedUsersData(email: String) -> User? {
+        var retrievedUser: User?
+        do {
+            let users = try context.fetch(User.fetchRequest())
+            users.forEach { user in
+                if user.email == email {
+                    retrievedUser = user
+                } else {
+                    retrievedUser = nil
+                }
+            }
+        }
+        catch {
+
+        }
+        return retrievedUser
+    }
 }

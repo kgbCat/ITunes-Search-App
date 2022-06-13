@@ -9,8 +9,6 @@ import UIKit
 
 class LoginViewModel  {
 
-    var appCoordinator = AppCoordinator()
-
     let coreData = CoreDataHelper()
 
     func validateUser(_ email:String, _ password: String) -> Bool {

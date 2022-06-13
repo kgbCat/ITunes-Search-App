@@ -81,6 +81,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ADFF68E2857CC2600303084 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0FBD82855243F00EB0390 /* User+CoreDataClass.swift */,
+				0AE0FBD92855243F00EB0390 /* User+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0ADFF68F2857CC5600303084 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0FBEC285789D700EB0390 /* LoginScene */,
+				0AE0FBE2285703C100EB0390 /* RegisterSene */,
+				0AE0FBD1285507A500EB0390 /* AlbumsScene */,
+				0AE0FBD2285507D300EB0390 /* TracksScene */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
 		0AE0FB942854855A00EB0390 = {
 			isa = PBXGroup;
 			children = (
@@ -100,22 +120,16 @@
 		0AE0FB9F2854855A00EB0390 /* ITunes Search App */ = {
 			isa = PBXGroup;
 			children = (
-				0AE0FBD82855243F00EB0390 /* User+CoreDataClass.swift */,
-				0AE0FBD92855243F00EB0390 /* User+CoreDataProperties.swift */,
-				0AE0FBDC285525DC00EB0390 /* CoreDataHelper.swift */,
 				0AE0FBA02854855A00EB0390 /* AppDelegate.swift */,
 				0AE0FBA22854855A00EB0390 /* SceneDelegate.swift */,
-				0AE0FBEC285789D700EB0390 /* LoginScene */,
-				0AE0FBE3285703D600EB0390 /* Extensions */,
-				0AE0FBE2285703C100EB0390 /* RegisterSene */,
-				0AE0FBD728551FB400EB0390 /* Services */,
 				0AE0FBD0285502D700EB0390 /* Coordinator */,
-				0AE0FBD2285507D300EB0390 /* TracksScene */,
-				0AE0FBD1285507A500EB0390 /* AlbumsScene */,
+				0AE0FBD728551FB400EB0390 /* Services */,
 				0AE0FBBB2854A8DE00EB0390 /* Model */,
+				0ADFF68F2857CC5600303084 /* Flows */,
+				0AE0FBE3285703D600EB0390 /* Extensions */,
 				0AE0FBA62854855A00EB0390 /* Main.storyboard */,
-				0AE0FBAC2854855C00EB0390 /* Assets.xcassets */,
 				0AE0FBAE2854855C00EB0390 /* LaunchScreen.storyboard */,
+				0AE0FBAC2854855C00EB0390 /* Assets.xcassets */,
 				0AE0FBB12854855C00EB0390 /* Info.plist */,
 				0AE0FBA92854855A00EB0390 /* ITunes_Search_App.xcdatamodeld */,
 			);
@@ -125,6 +139,7 @@
 		0AE0FBBB2854A8DE00EB0390 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0ADFF68E2857CC2600303084 /* CoreData */,
 				0AE0FBB92854891900EB0390 /* Album.swift */,
 				0AE0FBBC2854A8FD00EB0390 /* Track.swift */,
 			);
@@ -166,6 +181,7 @@
 			children = (
 				0AE0FBB7285485C200EB0390 /* NetworkService.swift */,
 				0AE0FBC02854B7FF00EB0390 /* NetworkError.swift */,
+				0AE0FBDC285525DC00EB0390 /* CoreDataHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -445,6 +461,7 @@
 				INFOPLIST_KEY_NSMainNibFile = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -474,6 +491,7 @@
 				INFOPLIST_KEY_NSMainNibFile = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
