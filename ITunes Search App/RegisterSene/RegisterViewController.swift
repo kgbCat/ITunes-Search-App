@@ -9,7 +9,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    private let viewModel = RegisterViewModel()
+    var viewModel = RegisterViewModel()
     private var isAgeValid = false
 
 

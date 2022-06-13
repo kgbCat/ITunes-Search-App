@@ -97,7 +97,7 @@ extension SearchAlbumViewController: UITableViewDelegate {
 
         let collectionId = albums[indexPath.row].collectionId
         AlbumTracksViewController().albumId = collectionId
-        viewModel.onTracksList()
+//        viewModel.onTracksList()
 
     }
 }

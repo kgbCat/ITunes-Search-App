@@ -10,7 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
 
-    let viewModel = LoginViewModel()
+    var viewModel = LoginViewModel()
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func signUpTapped(_ sender: Any) {
         // navigate to  register  scene
+        viewModel.appCoordinator.onRegisterScene()
     }
 
     @IBAction func signInTapped(_ sender: Any) {

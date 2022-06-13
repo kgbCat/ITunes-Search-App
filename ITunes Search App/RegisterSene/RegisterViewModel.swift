@@ -8,6 +8,9 @@
 import UIKit
 
 class RegisterViewModel {
+    
+    weak var appCoordinator: AppCoordinator?
+
     private let coreData = CoreDataHelper()
 
     func createNewUser(_ name: String, _ lastName: String, _ password: String,

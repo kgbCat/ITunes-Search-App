@@ -7,21 +7,34 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
+class AppCoordinator {
 
-    var parentCoordinator: Coordinator?
-    var children: [Coordinator] = []
-    var navigationController: UINavigationController
+    private let navigationController = UINavigationController()
 
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
+    var rootViewController: UIViewController {
+         return navigationController
+     }
 
     let storyboard  = UIStoryboard(name: "Main", bundle: nil)
 
     func start() {
-//        onAlbumSearchScene()
-        onTracksScene()
+        onLoginScene()
+    }
+    func onLoginScene() {
+        guard let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { fatalError("Unable to Instantiate Login View Controller")
+        }
+        let loginViewModel = LoginViewModel()
+        loginViewModel.appCoordinator = self
+        loginViewController.viewModel = loginViewModel
+        navigationController.pushViewController(loginViewController, animated: true)
+    }
+
+    func onRegisterScene() {
+        guard let registerViewController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
+        let registerViewModel = RegisterViewModel()
+        registerViewModel.appCoordinator = self
+        registerViewController.viewModel = registerViewModel
+        navigationController.pushViewController(registerViewController, animated: true)
     }
 
     func onAlbumSearchScene() {
@@ -30,7 +43,6 @@ class AppCoordinator: Coordinator {
         searchAlbumViewModel.appCoordinator = self
         searchAlbumViewController.viewModel = searchAlbumViewModel
         navigationController.pushViewController(searchAlbumViewController, animated: true)
-
     }
 
     func onTracksScene() {
