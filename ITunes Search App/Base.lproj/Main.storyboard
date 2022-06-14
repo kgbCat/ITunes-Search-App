@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="88W-7y-4qB">
-                                <rect key="frame" x="60" y="418.5" width="294" height="59.5"/>
+                                <rect key="frame" x="60" y="368.5" width="294" height="59.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwu-Mr-eys">
                                         <rect key="frame" x="0.0" y="0.0" width="294" height="20.5"/>
@@ -102,7 +102,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tDR-3T-4qE">
-                                <rect key="frame" x="60" y="498" width="294" height="59.5"/>
+                                <rect key="frame" x="60" y="448" width="294" height="59.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m14-bM-4g3">
                                         <rect key="frame" x="0.0" y="0.0" width="294" height="20.5"/>
@@ -118,7 +118,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="upO-jZ-sOs">
-                                <rect key="frame" x="40" y="597.5" width="334" height="90"/>
+                                <rect key="frame" x="40" y="547.5" width="334" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqj-bx-Mpz">
                                         <rect key="frame" x="67" y="0.0" width="200" height="40"/>
@@ -161,7 +161,7 @@
                             <constraint firstItem="aNv-Cy-xVQ" firstAttribute="trailing" secondItem="88W-7y-4qB" secondAttribute="trailing" constant="60" id="EDd-rq-WPU"/>
                             <constraint firstItem="88W-7y-4qB" firstAttribute="leading" secondItem="aNv-Cy-xVQ" secondAttribute="leading" constant="60" id="Ez3-8X-MW1"/>
                             <constraint firstItem="upO-jZ-sOs" firstAttribute="top" secondItem="tDR-3T-4qE" secondAttribute="bottom" constant="40" id="Yfx-ND-FBn"/>
-                            <constraint firstItem="88W-7y-4qB" firstAttribute="centerY" secondItem="pZr-ry-tAX" secondAttribute="centerY" id="aNM-vG-nv6"/>
+                            <constraint firstItem="88W-7y-4qB" firstAttribute="centerY" secondItem="pZr-ry-tAX" secondAttribute="centerY" constant="-50" id="aNM-vG-nv6"/>
                             <constraint firstItem="aNv-Cy-xVQ" firstAttribute="trailing" secondItem="upO-jZ-sOs" secondAttribute="trailing" constant="40" id="kU2-hD-fr8"/>
                             <constraint firstItem="tDR-3T-4qE" firstAttribute="top" secondItem="88W-7y-4qB" secondAttribute="bottom" constant="20" id="kud-8T-nAh"/>
                             <constraint firstItem="tDR-3T-4qE" firstAttribute="leading" secondItem="aNv-Cy-xVQ" secondAttribute="leading" constant="60" id="o3f-Ka-zkl"/>
@@ -227,7 +227,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A minimum of 6 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btV-bx-VRo">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A minimum of 6 characters, at least 1 uppercased letter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btV-bx-VRo">
                                                         <rect key="frame" x="0.0" y="139" width="334" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>

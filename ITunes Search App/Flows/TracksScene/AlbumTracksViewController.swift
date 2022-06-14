@@ -14,7 +14,7 @@ final class AlbumTracksViewController: UIViewController {
     private let networkService = NetworkService()
 
     private let cellId = String(describing: TrackTableViewCell.self)
-    private var tracks = [Track]()
+    private var loadedTracks = [Track]()
 
 
     @IBOutlet weak var albumImageView: UIImageView!
@@ -41,36 +41,26 @@ final class AlbumTracksViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getTracks(with: viewModel.id)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        getTracks()
         displayAlbumInfo()
     }
 
-    func getTracks(with id: Int) {
-        networkService.getAlbumTracks(albumId: id) { [weak self] tracks in
-            guard self != nil,
-                  tracks != nil
+    private func getTracks() {
+        networkService.getAlbumTracks(albumId: viewModel.id) { [weak self] tracks in
+            guard
+                let self = self,
+                let tracks = tracks
             else { return }
-            self?.tracks = tracks!
-//            tracks!.forEach({ track in
-//                if track.trackName != nil {
-//                    filteredTracks.append(track)
-//                }
-//            })
+            tracks.forEach({ track in
+                if track.trackName != nil {
+                    self.loadedTracks.append(track)
+                }
+            })
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
-
-//    private func getTracks() {
-//        if let loadedTracks = viewModel.getTracks() {
-//            print(loadedTracks)
-//            self.tracks = loadedTracks
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        }
-//    }
 
     private func displayAlbumInfo() {
         DispatchQueue.main.async {
@@ -85,7 +75,7 @@ final class AlbumTracksViewController: UIViewController {
 }
 extension AlbumTracksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tracks.count
+        loadedTracks.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,7 +83,7 @@ extension AlbumTracksViewController: UITableViewDataSource {
                                                        for: indexPath) as? TrackTableViewCell
         else { return UITableViewCell() }
 
-        if let trackTitle = tracks[indexPath.row].trackName {
+        if let trackTitle = loadedTracks[indexPath.row].trackName {
             cell.configure(title: trackTitle)
         }
         return cell
