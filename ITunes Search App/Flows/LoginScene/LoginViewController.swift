@@ -36,8 +36,6 @@ class LoginViewController: UIViewController {
         if viewModel.validateUser(email, password) {
             // navigate further
             coordinator?.onAlbumSearchScene(with: email)
-            //delova.anna@mail.ru
-            //Qwertyt1
         } else {
             viewModel.showAlert(controller: self, title: "Wrong credentials", message: "Please try again")
         }
@@ -55,7 +53,8 @@ class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        true
+        textField.resignFirstResponder()
+        return true
     }
 
 }

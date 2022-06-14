@@ -49,6 +49,15 @@ final class SearchAlbumViewController: UIViewController {
         displayUsersData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedIndexPath, animated: animated)
+        }
+    }
+
+
     private func displayUsersData() {
         if let user = viewModel.getUsersInfo() {
             DispatchQueue.main.async {
@@ -72,8 +81,6 @@ final class SearchAlbumViewController: UIViewController {
             }
         }
     }
-
-
 }
 extension SearchAlbumViewController: UITableViewDataSource {
 
@@ -96,25 +103,25 @@ extension SearchAlbumViewController: UITableViewDataSource {
 }
 
 extension SearchAlbumViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 
-        let collectionId = albums[indexPath.row].collectionId
-        let albumTitle = albums[indexPath.row].collectionName
-        let groupTitle = albums[indexPath.row].artistName
-        let releaseDate = albums[indexPath.row].releaseDate
-        let imageUrl = albums[indexPath.row].artworkUrl100
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        DispatchQueue.main.async {
-            self.coordinator?.onTracksScene(with: collectionId, albumTitle, groupTitle, releaseDate, imageUrl
-            )
-        }
+        let album = albums[indexPath.row]
+
+        coordinator?.onTracksScene(with: album.collectionId, album.collectionName, album.artistName, album.releaseDate, album.artworkUrl100)
+
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 extension SearchAlbumViewController: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText != "" {
-            albumSearch(searchText)
+
+        if searchText.isEmpty {
+            albums.removeAll()
+            tableView.reloadData()
+        } else {
+           albumSearch(searchText)
         }
     }
     

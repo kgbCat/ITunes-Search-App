@@ -20,13 +20,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-
     @IBOutlet weak var signUpButton: UIButton! {
         didSet {
             signUpButton.isEnabled = false
         }
     }
-
     @IBOutlet weak var datePicker: UIDatePicker! {
         didSet {
             datePicker.preferredDatePickerStyle = .compact
@@ -64,7 +62,6 @@ class RegisterViewController: UIViewController {
         coordinator?.onLoginScene()
     }
 
-
     @IBAction func checkAgeTapped(_ sender: UIButton) {
         if !viewModel.validateAge(birthDate: datePicker.date) {
             viewModel.showAlert(controller: self, title: "Invalid Age", message: "You must be between 18 and 100 years old to rgister")
@@ -75,6 +72,7 @@ class RegisterViewController: UIViewController {
             viewModel.showAlert(controller: self, title: "Valid Age", message: "Ok, you can go ahead")
         }
     }
+
 
     private func configureTextFields() {
         [firstNameTextField, lastNameTextField, emailTextField, passwordTextField, confirmPasswordTextField, telNumberTextField ].forEach { [weak self] textField in
@@ -108,11 +106,16 @@ class RegisterViewController: UIViewController {
 extension RegisterViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        true
+        textField.resignFirstResponder()
+        return true
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField {
+        case firstNameTextField:
+            textField.keyboardType = UIKeyboardType.alphabet
+        case lastNameTextField:
+            textField.keyboardType = UIKeyboardType.alphabet
         case telNumberTextField:
             textField.text = textField.text?.applyPatternOnNumbers()
         case emailTextField:

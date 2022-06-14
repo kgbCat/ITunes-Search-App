@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class AppCoordinator {
 
     var navigationController: UINavigationController
@@ -15,26 +16,26 @@ class AppCoordinator {
         self.navigationController = navigationController
     }
 
-    let storyboard  = UIStoryboard(name: "Main", bundle: nil)
+    let storyboard  = Constants.main
 
     func start() {
         onLoginScene()
     }
     
     func onLoginScene() {
-        guard let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { fatalError("Unable to Instantiate Login View Controller")
+        guard let loginViewController = storyboard.instantiateViewController(withIdentifier: Constants.loginViewController) as? LoginViewController else { fatalError(AppCoordinatorError.loginSceneError.rawValue)
         }
         navigationController.pushViewController(loginViewController, animated: true)
     }
 
     func onRegisterScene() {
-        guard let registerViewController = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
+        guard let registerViewController = storyboard.instantiateViewController(withIdentifier: Constants.registerViewController) as? RegisterViewController else {  fatalError(AppCoordinatorError.registerSceneError.rawValue) }
 
         navigationController.pushViewController(registerViewController, animated: true)
     }
 
     func onAlbumSearchScene(with email: String) {
-        guard let searchAlbumViewController = storyboard.instantiateViewController(withIdentifier: "SearchAlbumViewController") as? SearchAlbumViewController else { return }
+        guard let searchAlbumViewController = storyboard.instantiateViewController(withIdentifier: Constants.searchAlbumViewController) as? SearchAlbumViewController else {  fatalError(AppCoordinatorError.albumSearchSceneError.rawValue) }
         searchAlbumViewController.viewModel.email = email
         navigationController.pushViewController(searchAlbumViewController, animated: true)
     }
@@ -44,12 +45,11 @@ class AppCoordinator {
                        _ groupTitle: String,
                        _ date: String,
                        _ imageUrl: String ) {
-        guard let albumTracksViewController = storyboard.instantiateViewController(withIdentifier: "AlbumTracksViewController") as? AlbumTracksViewController else { return }
-        albumTracksViewController.albumId = id
-        albumTracksViewController.albumTitle = albumTitle
-        albumTracksViewController.groupTitle = groupTitle
-        albumTracksViewController.date = date
-        albumTracksViewController.image = imageUrl
+        guard let albumTracksViewController = storyboard.instantiateViewController(withIdentifier: Constants.albumTracksViewController) as? AlbumTracksViewController else {  fatalError(AppCoordinatorError.trackSceneError.rawValue) }
+        
+        albumTracksViewController.viewModel.id = id
+        albumTracksViewController.viewModel.getAlbumsData(albumTitle: albumTitle, groupTitle: groupTitle, date: date, imageUrl: imageUrl)
+        
         navigationController.pushViewController(albumTracksViewController, animated: true)
     }
 }

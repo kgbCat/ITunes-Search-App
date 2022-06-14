@@ -11,32 +11,21 @@ final class AlbumTracksViewController: UIViewController {
 
     var viewModel = AlbumTracksViewModel()
     var coordinator: AppCoordinator?
+    private let networkService = NetworkService()
+
     private let cellId = String(describing: TrackTableViewCell.self)
-
-
-    let networkService = NetworkService()
-    var albumId = 0
-    var albumTitle = ""
-    var groupTitle = ""
-    var date =  ""
-    var image = ""
-
-    var tracks = [Track]()
+    private var tracks = [Track]()
 
 
     @IBOutlet weak var albumImageView: UIImageView!
-
     @IBOutlet weak var albumTitleLabel: UILabel!
     @IBOutlet weak var GroupTitleLabel: UILabel!
     @IBOutlet weak var releaseLabel: UILabel!
-
     @IBOutlet weak var tableView: UITableView! {
         didSet  {
             tableView.dataSource = self
-
             tableView.rowHeight = UITableView.automaticDimension
             tableView.estimatedRowHeight = 40
-
             let nib = UINib(nibName: cellId, bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: cellId)
         }
@@ -48,33 +37,47 @@ final class AlbumTracksViewController: UIViewController {
         if let navigationController = navigationController {
               coordinator = AppCoordinator(navigationController: navigationController)
           }
-        displayAlbumInfo()
-        getTracks()
-
     }
 
-    fileprivate func getTracks() {
-        networkService.getAlbumTracks(albumId: albumId) { [weak self] tracks in
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getTracks(with: viewModel.id)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        displayAlbumInfo()
+    }
+
+    func getTracks(with id: Int) {
+        networkService.getAlbumTracks(albumId: id) { [weak self] tracks in
             guard self != nil,
-                tracks != nil
+                  tracks != nil
             else { return }
-            tracks?.forEach({ track in
-                if track.trackName != nil {
-                    self?.tracks.append(track)
-                }
-            })
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
+            self?.tracks = tracks!
+//            tracks!.forEach({ track in
+//                if track.trackName != nil {
+//                    filteredTracks.append(track)
+//                }
+//            })
         }
     }
 
-    func displayAlbumInfo() {
+//    private func getTracks() {
+//        if let loadedTracks = viewModel.getTracks() {
+//            print(loadedTracks)
+//            self.tracks = loadedTracks
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
+
+    private func displayAlbumInfo() {
         DispatchQueue.main.async {
-            self.albumTitleLabel.text = self.albumTitle
-            self.GroupTitleLabel.text = self.groupTitle
-            self.releaseLabel.text = self.date
-            if let url = URL(string: self.image){
+            self.albumTitleLabel.text = self.viewModel.albumTitle
+            self.GroupTitleLabel.text = self.viewModel.groupTitle
+            self.releaseLabel.text = "release date: \(self.viewModel.date)"
+            if let url = URL(string: self.viewModel.image){
                 self.albumImageView.load(url: url)
             }
         }

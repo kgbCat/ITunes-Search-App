@@ -1,0 +1,99 @@
+
+/* Class = "UILabel"; text = "tel"; ObjectID = "4Qu-ak-hRG"; */
+"4Qu-ak-hRG.text" = "tel";
+
+/* Class = "UILabel"; text = "release date"; ObjectID = "5He-Kd-407"; */
+"5He-Kd-407.text" = "release date";
+
+/* Class = "UIButton"; configuration.title = "Sign up"; ObjectID = "6BM-Qs-4Ql"; */
+"6BM-Qs-4Ql.configuration.title" = "Sign up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6BM-Qs-4Ql"; */
+"6BM-Qs-4Ql.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Create an account"; ObjectID = "7W7-cX-Kcp"; */
+"7W7-cX-Kcp.text" = "Create an account";
+
+/* Class = "UIButton"; configuration.title = "Sign in"; ObjectID = "8AY-Lp-g47"; */
+"8AY-Lp-g47.configuration.title" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8AY-Lp-g47"; */
+"8AY-Lp-g47.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "CGS-sm-Tad"; */
+"CGS-sm-Tad.text" = "Name";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Gwu-Mr-eys"; */
+"Gwu-Mr-eys.text" = "Email";
+
+/* Class = "UILabel"; text = "Should be the same as password"; ObjectID = "I0Y-Rg-yFE"; */
+"I0Y-Rg-yFE.text" = "Should be the same as password";
+
+/* Class = "UILabel"; text = "Album Title"; ObjectID = "MmS-Kc-Bq7"; */
+"MmS-Kc-Bq7.text" = "Album Title";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "MrY-24-3QT"; */
+"MrY-24-3QT.placeholder" = "Password";
+
+/* Class = "UIButton"; configuration.title = "Sign up"; ObjectID = "SQO-cq-Dsh"; */
+"SQO-cq-Dsh.configuration.title" = "Sign up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SQO-cq-Dsh"; */
+"SQO-cq-Dsh.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Last name"; ObjectID = "TPB-fh-HSc"; */
+"TPB-fh-HSc.placeholder" = "Last name";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "UgV-cb-j7J"; */
+"UgV-cb-j7J.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Confirm password"; ObjectID = "Un8-nj-wxR"; */
+"Un8-nj-wxR.placeholder" = "Confirm password";
+
+/* Class = "UILabel"; text = "Already have an account? "; ObjectID = "Wy6-hV-Wja"; */
+"Wy6-hV-Wja.text" = "Already have an account? ";
+
+/* Class = "UITextField"; placeholder = "First name"; ObjectID = "Zci-4p-pOa"; */
+"Zci-4p-pOa.placeholder" = "First name";
+
+/* Class = "UILabel"; text = "A minimum of 6 characters"; ObjectID = "btV-bx-VRo"; */
+"btV-bx-VRo.text" = "A minimum of 6 characters";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "ch4-6V-VXP"; */
+"ch4-6V-VXP.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "age"; ObjectID = "dvq-p1-GYh"; */
+"dvq-p1-GYh.text" = "age";
+
+/* Class = "UILabel"; text = "Enter your phone number (ex. 71234567890)"; ObjectID = "f6V-AF-W7p"; */
+"f6V-AF-W7p.text" = "Enter your phone number (ex. 71234567890)";
+
+/* Class = "UILabel"; text = "You have to be over 18 to register. Lets check, enter you date of birth."; ObjectID = "gJ7-2J-ECx"; */
+"gJ7-2J-ECx.text" = "You have to be over 18 to register. Lets check, enter you date of birth.";
+
+/* Class = "UILabel"; text = "Group Title"; ObjectID = "hUg-2u-lxw"; */
+"hUg-2u-lxw.text" = "Group Title";
+
+/* Class = "UILabel"; text = "email"; ObjectID = "ilW-dE-wPw"; */
+"ilW-dE-wPw.text" = "email";
+
+/* Class = "UIButton"; configuration.title = "Check age"; ObjectID = "kwf-di-Ei9"; */
+"kwf-di-Ei9.configuration.title" = "Check age";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kwf-di-Ei9"; */
+"kwf-di-Ei9.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "m14-bM-4g3"; */
+"m14-bM-4g3.text" = "Password";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "m42-1D-5dV"; */
+"m42-1D-5dV.placeholder" = "Email Address";
+
+/* Class = "UIButton"; configuration.title = "Sign in"; ObjectID = "wqj-bx-Mpz"; */
+"wqj-bx-Mpz.configuration.title" = "Sign in";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wqj-bx-Mpz"; */
+"wqj-bx-Mpz.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Telephone Number"; ObjectID = "xy9-dh-ltb"; */
+"xy9-dh-ltb.placeholder" = "Telephone Number";

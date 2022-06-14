@@ -27,7 +27,7 @@ class CoreDataHelper {
         do {
             try context.save()
         } catch {
-            // TODO: handle error
+            fatalError(CoreDataError.couldntSave.rawValue)
         }
     }
 
@@ -44,7 +44,7 @@ class CoreDataHelper {
                 }
             }
         } catch {
-            // TODO: handle error
+            fatalError(CoreDataError.couldntFetch.rawValue)
         }
         return returnedUser
     }
@@ -62,7 +62,7 @@ class CoreDataHelper {
             }
         }
         catch {
-
+            fatalError(CoreDataError.couldFetchWithEmail.rawValue)
         }
         return retrievedUser
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8DC7F428586B3F005E6FD9 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DC7F328586B3F005E6FD9 /* CoreDataError.swift */; };
+		0A8DC7F628586B97005E6FD9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DC7F528586B97005E6FD9 /* Constants.swift */; };
+		0A8DC7F828586DA5005E6FD9 /* AppCoordinatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DC7F728586DA5005E6FD9 /* AppCoordinatorError.swift */; };
 		0AE0FBA12854855A00EB0390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FBA02854855A00EB0390 /* AppDelegate.swift */; };
 		0AE0FBA32854855A00EB0390 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FBA22854855A00EB0390 /* SceneDelegate.swift */; };
 		0AE0FBA52854855A00EB0390 /* SearchAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FBA42854855A00EB0390 /* SearchAlbumViewController.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A8DC7F328586B3F005E6FD9 /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		0A8DC7F528586B97005E6FD9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0A8DC7F728586DA5005E6FD9 /* AppCoordinatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorError.swift; sourceTree = "<group>"; };
 		0AE0FB9D2854855A00EB0390 /* ITunes Search App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ITunes Search App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE0FBA02854855A00EB0390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE0FBA22854855A00EB0390 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A8DC7F928586DC4005E6FD9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0FBB7285485C200EB0390 /* NetworkService.swift */,
+				0AE0FBC02854B7FF00EB0390 /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0A8DC7FA28586DCD005E6FD9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0FBDC285525DC00EB0390 /* CoreDataHelper.swift */,
+				0A8DC7F328586B3F005E6FD9 /* CoreDataError.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		0ADFF68E2857CC2600303084 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +146,7 @@
 			children = (
 				0AE0FBA02854855A00EB0390 /* AppDelegate.swift */,
 				0AE0FBA22854855A00EB0390 /* SceneDelegate.swift */,
+				0A8DC7F528586B97005E6FD9 /* Constants.swift */,
 				0AE0FBD0285502D700EB0390 /* Coordinator */,
 				0AE0FBD728551FB400EB0390 /* Services */,
 				0AE0FBBB2854A8DE00EB0390 /* Model */,
@@ -150,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				0AE0FBC82854FE2E00EB0390 /* AppCoordinator.swift */,
+				0A8DC7F728586DA5005E6FD9 /* AppCoordinatorError.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -179,9 +205,8 @@
 		0AE0FBD728551FB400EB0390 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0AE0FBB7285485C200EB0390 /* NetworkService.swift */,
-				0AE0FBC02854B7FF00EB0390 /* NetworkError.swift */,
-				0AE0FBDC285525DC00EB0390 /* CoreDataHelper.swift */,
+				0A8DC7F928586DC4005E6FD9 /* Networking */,
+				0A8DC7FA28586DCD005E6FD9 /* CoreData */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -286,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8DC7F628586B97005E6FD9 /* Constants.swift in Sources */,
 				0AE0FBC92854FE2E00EB0390 /* AppCoordinator.swift in Sources */,
 				0AE0FBA52854855A00EB0390 /* SearchAlbumViewController.swift in Sources */,
 				0AE0FBA12854855A00EB0390 /* AppDelegate.swift in Sources */,
@@ -297,6 +323,7 @@
 				0AE0FBA32854855A00EB0390 /* SceneDelegate.swift in Sources */,
 				0AE0FBDD285525DC00EB0390 /* CoreDataHelper.swift in Sources */,
 				0AE0FBDA2855243F00EB0390 /* User+CoreDataClass.swift in Sources */,
+				0A8DC7F428586B3F005E6FD9 /* CoreDataError.swift in Sources */,
 				0AE0FBE52857045B00EB0390 /* Strng+formating.swift in Sources */,
 				0AE0FBB8285485C200EB0390 /* NetworkService.swift in Sources */,
 				0AE0FBE12855288E00EB0390 /* RegisterViewModel.swift in Sources */,
@@ -305,6 +332,7 @@
 				0AE0FBD52855080000EB0390 /* TrackTableViewCell.swift in Sources */,
 				0AE0FBC12854B7FF00EB0390 /* NetworkError.swift in Sources */,
 				0AE0FBDB2855243F00EB0390 /* User+CoreDataProperties.swift in Sources */,
+				0A8DC7F828586DA5005E6FD9 /* AppCoordinatorError.swift in Sources */,
 				0AE0FBEB2857625D00EB0390 /* LoginViewModel.swift in Sources */,
 				0AE0FBBA2854891900EB0390 /* Album.swift in Sources */,
 				0AE0FBCF2855014A00EB0390 /* AlbumTracksViewModel.swift in Sources */,
@@ -338,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -398,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

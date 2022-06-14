@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1zp-aL-iv3">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vac-0m-bhj">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQ6-ya-2xg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602.8985507246377" y="51.5625"/>
+            <point key="canvasLocation" x="2513.04347826087" y="51.5625"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="VpQ-ka-L0c">
@@ -94,7 +94,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UgV-cb-j7J">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UgV-cb-j7J">
                                         <rect key="frame" x="0.0" y="25.5" width="294" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -110,7 +110,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ch4-6V-VXP">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ch4-6V-VXP">
                                         <rect key="frame" x="0.0" y="25.5" width="294" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -128,8 +128,9 @@
                                         </constraints>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Sign  in">
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign in">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signInTapped:" destination="ZTV-gy-HBs" eventType="touchUpInside" id="uvV-gH-lHD"/>
@@ -143,6 +144,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign up">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signUpTapped:" destination="ZTV-gy-HBs" eventType="touchUpInside" id="YFc-lR-GEF"/>
@@ -173,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdP-ue-UGv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-727.536231884058" y="52.901785714285715"/>
+            <point key="canvasLocation" x="182.60869565217394" y="52.901785714285715"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="sbX-tx-I7O">
@@ -190,22 +192,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W7-cX-Kcp">
-                                                <rect key="frame" x="113" y="60" width="188.5" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <rect key="frame" x="113.5" y="60" width="187.5" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have to be over 18 to register. Lets check, enter you date of birth." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ7-2J-ECx">
-                                                <rect key="frame" x="21" y="129" width="372" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="jt0-e2-6Wm"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have to be over 18 to register. Lets check, enter you date of birth." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ7-2J-ECx">
+                                                <rect key="frame" x="40" y="126.5" width="334" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eeu-sY-dY9">
-                                                <rect key="frame" x="40" y="399" width="334" height="217"/>
+                                                <rect key="frame" x="40" y="392" width="334" height="217"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your phone number (ex. 71234567890)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6V-AF-W7p">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
@@ -248,7 +247,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQO-cq-Dsh">
-                                                <rect key="frame" x="107" y="636" width="200" height="40"/>
+                                                <rect key="frame" x="107" y="629" width="200" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="0iq-jj-PzI"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="df7-ZC-ebM"/>
@@ -262,35 +261,29 @@
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
+                                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="signUpButtonTapped:" destination="Ubl-WE-U2S" eventType="touchUpInside" id="OKO-bG-sSr"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DWd-sS-cNP">
-                                                <rect key="frame" x="40" y="696" width="334" height="36"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DWd-sS-cNP">
+                                                <rect key="frame" x="65" y="689" width="284.5" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy6-hV-Wja">
-                                                        <rect key="frame" x="0.0" y="7.5" width="224" height="21.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="202.5" height="36"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AY-Lp-g47">
-                                                        <rect key="frame" x="224" y="0.0" width="110" height="36"/>
+                                                        <rect key="frame" x="202.5" y="0.0" width="82" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="ANh-a4-Tyf"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="QlA-su-IDf"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain">
-                                                            <attributedString key="attributedTitle">
-                                                                <fragment content="Sign in">
-                                                                    <attributes>
-                                                                        <font key="NSFont" size="18" name="Helvetica"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Sign in">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="signInButtonTapped:" destination="Ubl-WE-U2S" eventType="touchUpInside" id="BYp-IN-nmx"/>
@@ -299,13 +292,14 @@
                                                 </subviews>
                                             </stackView>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Gzq-RN-r1E">
-                                                <rect key="frame" x="40" y="192" width="334" height="50"/>
+                                                <rect key="frame" x="40" y="185" width="334" height="50"/>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="jwI-Pf-6d6"/>
                                                 </constraints>
                                             </datePicker>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwf-di-Ei9">
-                                                <rect key="frame" x="264" y="244" width="110" height="36"/>
+                                                <rect key="frame" x="264" y="237" width="110" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="ZwN-sA-zIG"/>
                                                     <constraint firstAttribute="height" constant="36" id="dC9-ZD-imM"/>
@@ -319,7 +313,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="X8q-Bj-bRI">
-                                                <rect key="frame" x="40" y="300" width="334" height="79"/>
+                                                <rect key="frame" x="40" y="293" width="334" height="79"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zci-4p-pOa">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
@@ -337,21 +331,22 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="eeu-sY-dY9" secondAttribute="trailing" constant="40" id="0PW-So-7aJ"/>
-                                            <constraint firstItem="DWd-sS-cNP" firstAttribute="leading" secondItem="97Z-Ss-ziE" secondAttribute="leading" constant="40" id="1sU-MK-RrQ"/>
                                             <constraint firstItem="DWd-sS-cNP" firstAttribute="top" secondItem="SQO-cq-Dsh" secondAttribute="bottom" constant="20" id="809-Oh-6GE"/>
                                             <constraint firstItem="Gzq-RN-r1E" firstAttribute="leading" secondItem="97Z-Ss-ziE" secondAttribute="leading" constant="40" id="B9a-zF-MFj"/>
+                                            <constraint firstAttribute="trailing" secondItem="gJ7-2J-ECx" secondAttribute="trailing" constant="40" id="FFQ-qB-ay2"/>
                                             <constraint firstItem="eeu-sY-dY9" firstAttribute="leading" secondItem="97Z-Ss-ziE" secondAttribute="leading" constant="40" id="FMT-gx-35O"/>
                                             <constraint firstItem="Gzq-RN-r1E" firstAttribute="top" secondItem="gJ7-2J-ECx" secondAttribute="bottom" constant="20" id="FaB-0u-qRh"/>
                                             <constraint firstItem="SQO-cq-Dsh" firstAttribute="centerX" secondItem="97Z-Ss-ziE" secondAttribute="centerX" id="KNF-ig-Ela"/>
                                             <constraint firstAttribute="height" constant="900" id="KVJ-Yd-C9H"/>
                                             <constraint firstItem="gJ7-2J-ECx" firstAttribute="centerX" secondItem="97Z-Ss-ziE" secondAttribute="centerX" id="LOe-c9-5iR"/>
                                             <constraint firstItem="7W7-cX-Kcp" firstAttribute="centerX" secondItem="97Z-Ss-ziE" secondAttribute="centerX" id="Q40-kx-EgH"/>
+                                            <constraint firstItem="DWd-sS-cNP" firstAttribute="centerX" secondItem="97Z-Ss-ziE" secondAttribute="centerX" id="SXB-DZ-gp6"/>
                                             <constraint firstItem="SQO-cq-Dsh" firstAttribute="top" secondItem="eeu-sY-dY9" secondAttribute="bottom" constant="20" id="SqQ-NH-Nmi"/>
                                             <constraint firstAttribute="trailing" secondItem="Gzq-RN-r1E" secondAttribute="trailing" constant="40" id="USu-2S-Azf"/>
+                                            <constraint firstItem="gJ7-2J-ECx" firstAttribute="leading" secondItem="97Z-Ss-ziE" secondAttribute="leading" constant="40" id="VO7-eA-gf9"/>
                                             <constraint firstItem="kwf-di-Ei9" firstAttribute="top" secondItem="Gzq-RN-r1E" secondAttribute="bottom" constant="2" id="WYS-8N-blp"/>
                                             <constraint firstItem="7W7-cX-Kcp" firstAttribute="top" secondItem="97Z-Ss-ziE" secondAttribute="top" constant="60" id="bzz-xJ-zYs"/>
                                             <constraint firstItem="X8q-Bj-bRI" firstAttribute="top" secondItem="kwf-di-Ei9" secondAttribute="bottom" constant="20" id="eV1-Xh-U4N"/>
-                                            <constraint firstAttribute="trailing" secondItem="DWd-sS-cNP" secondAttribute="trailing" constant="40" id="gHT-Zl-82p"/>
                                             <constraint firstItem="gJ7-2J-ECx" firstAttribute="top" secondItem="7W7-cX-Kcp" secondAttribute="bottom" constant="40" id="mgr-YU-v2r"/>
                                             <constraint firstItem="kwf-di-Ei9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="97Z-Ss-ziE" secondAttribute="leading" constant="264" id="o6W-DB-vXe"/>
                                             <constraint firstItem="X8q-Bj-bRI" firstAttribute="leading" secondItem="97Z-Ss-ziE" secondAttribute="leading" constant="40" id="obB-T9-nTw"/>
@@ -394,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCJ-bO-bPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.086956521739133" y="51.5625"/>
+            <point key="canvasLocation" x="936.23188405797111" y="51.5625"/>
         </scene>
         <!--Search Album View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -469,31 +464,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805.79710144927537" y="51.5625"/>
+            <point key="canvasLocation" x="1715.9420289855075" y="51.5625"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="wBQ-Zn-y3c">
+        <scene sceneID="FGq-ze-Krf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1zp-aL-iv3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vac-0m-bhj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="as7-Lh-MD8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gtQ-z7-BMR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ZTV-gy-HBs" kind="relationship" relationship="rootViewController" id="MdT-Cv-WeE"/>
+                        <segue destination="ZTV-gy-HBs" kind="relationship" relationship="rootViewController" id="OCU-kw-F4q"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fxy-fn-pNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YhA-GG-o6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1637.68115942029" y="52.901785714285715"/>
+            <point key="canvasLocation" x="-727.536231884058" y="52.901785714285715"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultAlbumCover" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
