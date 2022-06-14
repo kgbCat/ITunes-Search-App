@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A8DC7F428586B3F005E6FD9 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DC7F328586B3F005E6FD9 /* CoreDataError.swift */; };
-		0A8DC7F628586B97005E6FD9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DC7F528586B97005E6FD9 /* Constants.swift */; };
 		0A8DC7F828586DA5005E6FD9 /* AppCoordinatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DC7F728586DA5005E6FD9 /* AppCoordinatorError.swift */; };
+		0A8DC8002858C51D005E6FD9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8DC7FF2858C51D005E6FD9 /* Constants.swift */; };
 		0AE0FBA12854855A00EB0390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FBA02854855A00EB0390 /* AppDelegate.swift */; };
 		0AE0FBA32854855A00EB0390 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FBA22854855A00EB0390 /* SceneDelegate.swift */; };
 		0AE0FBA52854855A00EB0390 /* SearchAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FBA42854855A00EB0390 /* SearchAlbumViewController.swift */; };
@@ -42,8 +42,8 @@
 
 /* Begin PBXFileReference section */
 		0A8DC7F328586B3F005E6FD9 /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
-		0A8DC7F528586B97005E6FD9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0A8DC7F728586DA5005E6FD9 /* AppCoordinatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorError.swift; sourceTree = "<group>"; };
+		0A8DC7FF2858C51D005E6FD9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0AE0FB9D2854855A00EB0390 /* ITunes Search App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ITunes Search App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE0FBA02854855A00EB0390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE0FBA22854855A00EB0390 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 			children = (
 				0AE0FBA02854855A00EB0390 /* AppDelegate.swift */,
 				0AE0FBA22854855A00EB0390 /* SceneDelegate.swift */,
-				0A8DC7F528586B97005E6FD9 /* Constants.swift */,
+				0A8DC7FF2858C51D005E6FD9 /* Constants.swift */,
 				0AE0FBD0285502D700EB0390 /* Coordinator */,
 				0AE0FBD728551FB400EB0390 /* Services */,
 				0AE0FBBB2854A8DE00EB0390 /* Model */,
@@ -311,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A8DC7F628586B97005E6FD9 /* Constants.swift in Sources */,
 				0AE0FBC92854FE2E00EB0390 /* AppCoordinator.swift in Sources */,
 				0AE0FBA52854855A00EB0390 /* SearchAlbumViewController.swift in Sources */,
 				0AE0FBA12854855A00EB0390 /* AppDelegate.swift in Sources */,
@@ -319,6 +318,7 @@
 				0AE0FBCD2854FF6E00EB0390 /* SearchAlbumViewModel.swift in Sources */,
 				0AE0FBDF2855285000EB0390 /* RegisterViewController.swift in Sources */,
 				0AE0FBE7285704EE00EB0390 /* URLComponents+ setQueryItems.swift in Sources */,
+				0A8DC8002858C51D005E6FD9 /* Constants.swift in Sources */,
 				0AE0FBBF2854ABDB00EB0390 /* AlbumTracksViewController.swift in Sources */,
 				0AE0FBA32854855A00EB0390 /* SceneDelegate.swift in Sources */,
 				0AE0FBDD285525DC00EB0390 /* CoreDataHelper.swift in Sources */,
